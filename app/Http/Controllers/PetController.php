@@ -138,7 +138,7 @@ class PetController extends Controller
     {
         $pet = Http::get("https://petstore.swagger.io/v2/pet/$id");
         return view('pets.edit', [
-            'pet' => $pet
+            'pet' => $pet->json()
         ]);
     }
 
